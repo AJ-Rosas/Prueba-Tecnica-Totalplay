@@ -1,0 +1,45 @@
+@use "../core/index" as c;
+
+.header {
+  background: c.$bg_moradoA;
+  min-height: 63px;
+  padding: 10px 0px;
+  .container {
+    gap: 10px;
+    .header__contenido {
+      gap: 10px;
+      h1 {
+        font-size: 20px;
+        color: c.$txt_blancoA;
+        font-weight: 500;
+        margin: 0;
+      }
+      a {
+        color: c.$txt_blancoA;
+        span {
+          font-size: 20px;
+          font-weight: 500;
+        }
+        i {
+          font-size: 12px;
+        }
+      }
+      .header__profeco {
+        height: 16px;
+        @include c.media(md) {
+          height: 20px;
+        }
+      }
+      .header__insignias {
+        height: 37px;
+      }
+    }
+    a {
+      color: c.$txt_blancoA;
+      font-size: 14px;
+      i {
+        font-size: 10px;
+      }
+    }
+  }
+}

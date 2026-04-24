@@ -1,0 +1,29 @@
+@use "../variables/index" as c;
+
+@mixin media($size) {
+  @if $size == sm {
+    @media (min-width: c.$sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: c.$md) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: c.$lg) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: c.$xl) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media (min-width: c.$xxl) {
+      @content;
+    }
+  } @else if $size == uw {
+    @media (min-width: c.$uw) {
+      @content;
+    }
+  }
+}

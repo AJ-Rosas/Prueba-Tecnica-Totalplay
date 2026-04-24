@@ -1,0 +1,30 @@
+@use "../variables/colors" as c;
+@use "../mixins/responsive" as r;
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+// FONT WEIGHT
+// fw-bold     → font-weight: 700;
+// fw-bolder   → font-weight: bolder;
+// fw-semibold → font-weight: 600;
+// fw-medium   → font-weight: 500;
+// fw-normal   → font-weight: 400;
+// fw-light    → font-weight: 300;
+// fw-lighter  → font-weight: lighter;
+
+// FONT STYLE
+// fst-italic  → font-style: italic;
+// fst-normal  → font-style: normal;
+
+// fs-1 40
+// fs-2 32
+// fs-3 28
+// fs-4 24
+// fs-5 20px
+// fs-6 16
+
+.fs-14 {
+  font-size: 14px;
+}

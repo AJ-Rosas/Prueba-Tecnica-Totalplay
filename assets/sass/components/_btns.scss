@@ -1,0 +1,91 @@
+@use "../core/index" as c;
+
+.btn__menu {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  span {
+    position: absolute;
+    left: 8px;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+
+    &:nth-child(1) {
+      top: 12px;
+    }
+    &:nth-child(2) {
+      top: 19px;
+    }
+    &:nth-child(3) {
+      top: 26px;
+    }
+  }
+  &.activo {
+    span {
+      &:nth-child(1) {
+        top: 19px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        top: 19px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.btn__cuenta {
+  background: c.$bg_blancoA;
+  width: 48px;
+  aspect-ratio: 1/1;
+  @include c.flex($justify: center, $align: center, $gap: 4px);
+  @include c.media(xl) {
+    width: auto;
+    aspect-ratio: auto;
+    padding: 10px 24px;
+  }
+  span {
+    font-weight: 600;
+    font-size: 20px;
+    color: c.$txt_negroA;
+  }
+}
+
+.btn__hero {
+  background: c.$btn_darkA_bg;
+  border: 1px solid c.$btn_darkB_borde;
+  color: c.$btn_darkA_txt;
+  text-decoration: none;
+  padding: 10px 24px;
+}
+
+.btn__testimonio {
+  width: 159px;
+  height: 60px;
+  background: c.$btn_lightB_bg;
+  border: 2px solid c.$btn_lightB_borde;
+  color: c.$btn_lightB_txt;
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: c.$btn_darkB_bg;
+    border: 1px solid c.$btn_darkB_borde;
+    color: c.$btn_darkB_txt;
+  }
+  &.activo {
+    background: c.$btn_darkB_bg;
+    border: 1px solid c.$btn_darkB_borde;
+    color: c.$btn_darkB_txt;
+  }
+}
+
+$btn_darkB_txt: #ffffff;

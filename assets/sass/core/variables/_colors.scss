@@ -1,0 +1,71 @@
+// * MARCA
+$total_amarillo: #fcbd3f;
+$total_morado: #7f4c9c;
+$total_rosa: #ed4f96;
+$total_azul: #5bc7e4;
+$total_lima: #d8e046;
+$total_rojo: #e31e2d;
+
+// * TEXT
+$txt_blancoA: #ffffff;
+$txt_negroA: #000000;
+$txt_negroB: #17171f;
+$txt_grisA: #585858;
+
+// * BACKGROUNDS
+$bg_moradoA: #6e26ff; // bg titulo
+$bg_negroA: #000000; // bg header, 10-Millones, appleTV
+$bg_negroA_mobile: #17171f; // ? bg header, 10-Millones
+
+$bg_negroB: #17171f; // bg planes
+
+$bg_blancoA: #f1f1f1; // bg hero
+$bg_blancoA_mobile: #f0f0f0; // ? bg hero
+$bg_blancoB: #f4f5f9; // bg 10-Millones
+
+// * CAROUSEL ITEMS DOTS HERO
+// dot container
+$carouselA_dotsContainer_bg: #ffffff;
+$carouselA_dotsContainer_borde: #e9e9e9;
+// dot
+$carouselA_dotActive_bg: #17171f;
+$carouselA_dot_bg: #d9d9d9;
+
+// * CAROUSEL ITEMS DOTS PLANES
+// dot container
+$carouselB_dotsContainer_bg: #e9e9e9;
+$carouselB_dotsContainer_borde: #e9e9e9;
+// dot
+$carouselB_dotActive_bg: #000000;
+$carouselB_dot_bg: #d9d9d9;
+
+// * CARD PLANES
+$card_planA_gradienteVerde: linear-gradient(to right, #ffffff, #e4ffe4);
+$card_planA_bg: #f5f5f5;
+$card_planA_borde: #cfcfcf;
+
+// * BTNS
+// btn Cuenta
+$btn_lightA_bg: #ffffff;
+$btn_lightA_borde: #ffffff;
+$btn_lightA_txt: #000000;
+
+// btn 10 millones inactivo
+$btn_lightB_bg: #ffffff;
+$btn_lightB_borde: #c9cdd4;
+$btn_lightB_txt: #c9cdd4;
+
+// btn Hero
+$btn_darkA_bg: #000000;
+$btn_darkA_borde: #ffffff;
+$btn_darkA_txt: #ffffff;
+
+// btn 10 millones activo
+$btn_darkB_bg: #000000;
+$btn_darkB_borde: #cbdcff;
+$btn_darkB_txt: #ffffff;
+
+// btn Planes
+$btn_blueA_bg: #1689ff;
+// $btn_blueA_borde: none;
+$btn_blueA_txt: #ffffff;

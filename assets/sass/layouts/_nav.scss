@@ -1,0 +1,55 @@
+@use "../core/index" as c;
+
+.nav {
+  background: #000;
+  padding: 10px 0px;
+  a {
+    text-decoration: none;
+    color: c.$txt_blancoA;
+    font-weight: 700;
+  }
+
+  .navegacion {
+    a {
+      padding: 5px;
+      white-space: nowrap;
+      @include c.media(xxl) {
+        padding: 10px 20px;
+      }
+    }
+    .dropdown {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .dropdown-menu {
+        width: 100%;
+        margin-top: 0px;
+        @media (max-width: 991.98px) {
+          position: static !important;
+          transform: none !important;
+        }
+      }
+
+      @include c.media(lg) {
+        width: auto;
+        a {
+          width: auto;
+          display: inline-flex;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        }
+
+        .dropdown-menu {
+          position: absolute !important;
+          width: auto;
+          margin-top: 0;
+          transform: none;
+          inset: auto;
+          float: none;
+        }
+      }
+    }
+  }
+}

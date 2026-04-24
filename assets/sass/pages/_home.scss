@@ -1,0 +1,310 @@
+@use "../core/index" as c;
+
+.hero {
+  max-height: 484px;
+  padding: 12px 0px;
+  @include c.media(lg) {
+    max-height: 722px;
+  }
+
+  .carousel-indicators {
+    width: fit-content;
+    padding: 0px 20px;
+    background: c.$carouselA_dotsContainer_bg;
+    border: 1px solid c.$carouselA_dotsContainer_borde;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    border-radius: 30px;
+    position: relative;
+
+    @include c.flex($justify: center, $align: center, $gap: 20px);
+    button {
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      padding: 0;
+      margin: 0;
+      background: c.$carouselB_dot_bg;
+      border: none;
+      &.active {
+        background: c.$carouselB_dotActive_bg;
+      }
+    }
+  }
+  article {
+    h2 {
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      @include c.media(lg) {
+        font-size: 58px;
+      }
+    }
+    img {
+      width: 60%;
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      color: c.$txt_grisA;
+      text-align: center;
+      @include c.media(lg) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.planes {
+  padding: 40px 0px;
+  background: c.$bg_negroB;
+  h2 {
+    font-weight: 600;
+    color: c.$txt_blancoA;
+    font-size: 34px;
+    margin-bottom: 29px;
+    @include c.media(lg) {
+      font-size: 58px;
+      font-weight: 700;
+    }
+  }
+  .planes__list {
+    #carouselPlanes {
+      width: 100%;
+      @include c.media(lg) {
+        overflow: visible;
+        .carousel-inner {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px;
+          .carousel-item {
+            display: block;
+            margin-right: 0;
+            padding: 0;
+            width: auto;
+            & > div {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .carousel-indicators {
+        width: fit-content;
+        padding: 0px 20px;
+        background: c.$carouselA_dotsContainer_bg;
+        border: 1px solid c.$carouselA_dotsContainer_borde;
+        height: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        border-radius: 30px;
+        position: relative;
+
+        @include c.flex($justify: center, $align: center, $gap: 20px);
+        button {
+          width: 14px;
+          height: 14px;
+          border-radius: 100%;
+          padding: 0;
+          margin: 0;
+          background: c.$carouselB_dot_bg;
+          border: none;
+          &.active {
+            background: c.$carouselB_dotActive_bg;
+          }
+        }
+
+        @include c.media(lg) {
+          display: none;
+        }
+      }
+    }
+    .carousel-inner {
+      overflow: visible;
+      .carousel-item {
+        padding: 0 12px;
+        & > div {
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+
+    .plan {
+      overflow: hidden;
+      background: c.$card_planA_bg;
+      border: 1px solid c.$card_planA_borde;
+      border-radius: 22px;
+      height: 100%;
+      .plan__header {
+        padding: 22px 11px;
+        background: c.$card_planA_gradienteVerde;
+        min-height: 288px;
+        margin-bottom: 12px;
+        @include c.flex($direction: column, $align: center, $gap: 12px);
+        h3 {
+          font-weight: 600;
+          font-size: 40px;
+          color: c.$txt_negroB;
+          text-align: center;
+        }
+        p {
+          margin: 0;
+          font-weight: 600;
+          font-size: 15px;
+          color: c.$txt_negroB;
+          text-align: center;
+        }
+        img {
+          width: 80%;
+        }
+      }
+      .plan__body {
+        padding-bottom: 16px;
+        @include c.flex($direction: column, $align: center, $gap: 12px);
+        .plan__apple {
+          padding: 6px;
+          width: 129px;
+          height: 61px;
+          border-radius: 8px;
+          @include c.flex($direction: column, $justify: center, $align: center);
+          background: c.$bg_negroB;
+          img {
+            width: 48px;
+          }
+          span {
+            font-weight: 500;
+            font-size: 11px;
+            color: c.$txt_blancoA;
+          }
+        }
+        ul {
+          list-style: none;
+          padding: 0px 16px;
+          margin: 0;
+          li {
+            margin-bottom: 10px;
+            @include c.flex($gap: 10px);
+            .check {
+              width: 16px;
+              height: 16px;
+              min-width: 16px;
+              margin-top: 4px;
+
+              border-radius: 100%;
+              background: c.$bg_negroB;
+              @include c.flex($justify: center, $align: center);
+            }
+          }
+        }
+        .plan__pago {
+          margin: 0;
+          font-weight: 400;
+          font-size: 16px;
+          color: c.$txt_negroB;
+          span {
+            font-weight: 700;
+          }
+        }
+        .btn {
+          width: 249px;
+          height: 48px;
+          @include c.flex($justify: center, $align: center);
+        }
+      }
+    }
+  }
+}
+
+.confian {
+  padding: 40px 0px 0px 0px;
+  h2 {
+    font-weight: 600;
+    font-size: 28px;
+    color: c.$txt_negroA;
+    margin-bottom: 29px;
+    @include c.media(lg) {
+      font-size: 58px;
+    }
+  }
+  .confian__contenido {
+    @include c.flex($direction: column-reverse, $gap: 56px);
+    @include c.media(lg) {
+      flex-direction: row;
+    }
+  }
+  .aval {
+    width: calc(100% + 24px);
+    padding: 24px;
+    margin-left: -12px;
+    margin-right: -12px;
+    background: c.$bg_negroA;
+
+    @include c.flex(
+      $direction: column,
+      $justify: center,
+      $align: center,
+      $gap: 16px
+    );
+    @include c.media(lg) {
+      border-radius: 22px;
+      width: 430px;
+      min-width: 430px;
+      flex: 0 0 430px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 18px;
+      color: c.$txt_blancoA;
+      text-align: center;
+      @include c.media(lg) {
+        font-size: 24px;
+      }
+    }
+    img {
+      width: 60%;
+    }
+    p {
+      font-weight: 400;
+      margin: 0;
+      font-size: 12px;
+      color: c.$txt_blancoA;
+      text-align: center;
+      @include c.media(lg) {
+        font-size: 15px;
+      }
+    }
+  }
+  .testimonios {
+    @include c.flex($direction: column, $gap: 23px);
+    .testimonios__btns {
+      flex-wrap: wrap;
+      @include c.flex($gap: 16px);
+    }
+    .testimonio {
+      display: none;
+
+      &.activo {
+        display: block;
+      }
+
+      .testimonio__estrellas {
+        @include c.flex($gap: 16px);
+        margin-bottom: 23px;
+      }
+      .testimonio__contenido {
+        font-weight: 400;
+        font-size: 24px;
+
+        @include c.media(lg) {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

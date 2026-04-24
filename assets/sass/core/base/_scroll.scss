@@ -1,0 +1,6 @@
+@use "../variables/colors" as c;
+@use "../mixins/responsive" as r;
+
+html {
+  scroll-behavior: smooth;
+}
